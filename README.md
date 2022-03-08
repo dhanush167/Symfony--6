@@ -38,3 +38,27 @@ symfony console debug:router
 composer require twig
 
 ```
+
+
+<p>Create a database using doctrine</p>
+
+
+```
+
+symfony console
+
+composer require orm
+
+symfony console list doctrine
+
+```
+
+<p>database connection </p>
+
+```
+
+composer require symfony/orm-pack
+composer require --dev symfony/maker-bundle
+symfony console doctrine:database:create
+
+```
