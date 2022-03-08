@@ -12,9 +12,17 @@
     <h1>
         Welcome to Symfony World
     </h1>
-    <p style="color: red; font-weight: bold">
-        {{ title }}
-    </p>
+
+    {% if title %}
+
+        <p>there is a title</p>
+
+    {% else %}
+
+        <p>don't have a title</p>
+
+    {% endif %}
+
 </div>
 </body>
 </html>
