@@ -8,9 +8,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MovieController extends AbstractController
 {
-    #[Route('/movie/{id}', name: 'app_movie', methods: ['GET','HEAD'])]
-    public function index($id): Response
+    #[Route('/movie', name: 'app_movie', methods: ['GET','HEAD'])]
+    public function index(): Response
     {
-        return  new Response($id);
+        return  $this->render('index.html.twig');
     }
 }
