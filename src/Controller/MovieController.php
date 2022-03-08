@@ -11,6 +11,6 @@ class MovieController extends AbstractController
     #[Route('/movie', name: 'app_movie', methods: ['GET','HEAD'])]
     public function index(): Response
     {
-        return  $this->render('index.html.twig');
+        return  $this->render('index.html.twig',['title'=>'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s']);
     }
 }
