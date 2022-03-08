@@ -1,28 +1,17 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<div style="max-width: 90%; margin: auto;">
-    <h1>
-        Welcome to Symfony World
-    </h1>
+{% extends "base.html.twig" %}
 
-    {% if title %}
+{% block title %}
 
-        <p>there is a title</p>
+    Movies Page
 
-    {% else %}
+{% endblock %}
 
-        <p>don't have a title</p>
+{% block body %}
 
-    {% endif %}
+    {% for car in  cars %}
 
-</div>
-</body>
-</html>
+         <li>{{ car }}</li>
+
+    {% endfor %}
+
+{% endblock %}
