@@ -8,12 +8,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MovieController extends AbstractController
 {
-    #[Route('/movie', name: 'app_movie')]
-    public function index(): Response
+    #[Route('/movie/{id}', name: 'app_movie', methods: ['GET','HEAD'])]
+    public function index($id): Response
     {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/MovieController.php',
-        ]);
+        return  new Response($id);
     }
 }

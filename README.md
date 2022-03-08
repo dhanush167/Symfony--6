@@ -23,3 +23,11 @@ symfony console make:controller MovieController
 http://127.0.0.1:8000/movie
 
 ```
+
+<p>Route parameters</p>
+
+```
+
+symfony console debug:router
+
+```
