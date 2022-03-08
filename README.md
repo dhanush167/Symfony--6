@@ -31,3 +31,10 @@ http://127.0.0.1:8000/movie
 symfony console debug:router
 
 ```
+
+<p>add twig for project</p>
+
+```
+composer require twig
+
+```
