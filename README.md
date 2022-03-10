@@ -85,3 +85,10 @@ symfony console make:entity Actor
 symfony console make:entity Movie
 
 ```
+
+```
+symfony console make:migration
+
+php bin/console doctrine:migrations:migrate
+
+```
