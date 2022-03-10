@@ -62,3 +62,15 @@ composer require --dev symfony/maker-bundle
 symfony console doctrine:database:create
 
 ```
+
+<p>Entities in Symfony</p>
+
+
+<p>1.add movie entity</p>
+
+```
+symfony console list doctrine
+symfony console
+
+symfony console make:entity
+```
