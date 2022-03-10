@@ -72,5 +72,9 @@ symfony console doctrine:database:create
 symfony console list doctrine
 symfony console
 
-symfony console make:entity
+symfony console make:entity Movie
+```
+
+```
+symfony console make:entity Actor
 ```
