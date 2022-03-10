@@ -78,3 +78,10 @@ symfony console make:entity Movie
 ```
 symfony console make:entity Actor
 ```
+
+<p>define a relation between table</p>
+
+```
+symfony console make:entity Movie
+
+```
