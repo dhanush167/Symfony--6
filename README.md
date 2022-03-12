@@ -92,3 +92,9 @@ symfony console make:migration
 php bin/console doctrine:migrations:migrate
 
 ```
+
+<p>data fixtures</p>
+
+```
+composer require --dev doctrine/doctrine-fixtures-bundle
+```
