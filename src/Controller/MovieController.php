@@ -11,15 +11,22 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MovieController extends AbstractController
 {
-    #[Route('/movie', name: 'app_movie', methods: ['GET','HEAD'])]
-    public function index(EntityManagerInterface $em): Response
+
+    private $em;
+
+    public function __construct(EntityManagerInterface $em)
     {
-        $movies = $em->getRepository(Movie::class)->findAll();
+        $this->em = $em;
+    }
+
+
+    #[Route('/movies', name: 'movies', methods: ['GET','HEAD'])]
+    public function index(): Response
+    {
+        $repository = $this->em->getRepository(Movie::class);
+        $movies = $repository->findAll();
 
         dd($movies);
 
-//        return  $this->render('index.html.twig',array(
-//            'cars'=>$cars
-//        ));
     }
 }
