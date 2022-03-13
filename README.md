@@ -117,3 +117,8 @@ npm i @symfony/webpack-encore
 npm run dev
 ```
 
+<p>javascript compile</p>
+
+```
+npm run watch
+```
