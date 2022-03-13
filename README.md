@@ -98,3 +98,6 @@ php bin/console doctrine:migrations:migrate
 ```
 composer require --dev doctrine/doctrine-fixtures-bundle
 ```
+```
+symfony console doctrine:fixtures:load
+```
