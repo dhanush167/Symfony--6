@@ -101,3 +101,9 @@ composer require --dev doctrine/doctrine-fixtures-bundle
 ```
 symfony console doctrine:fixtures:load
 ```
+
+<p>how to compile assets in symfony 6 compile css</p>
+
+```
+composer require symfony/webpack-encore-bundle
+```
