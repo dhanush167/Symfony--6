@@ -107,3 +107,13 @@ symfony console doctrine:fixtures:load
 ```
 composer require symfony/webpack-encore-bundle
 ```
+```
+npm install --global yarn
+
+npm i @symfony/webpack-encore
+```
+
+```
+npm run dev
+```
+
