@@ -130,3 +130,7 @@ npm run watch
 ```
 composer require symfony/form
 ```
+
+```
+symfony console make:form MovieFormType Movie
+```
