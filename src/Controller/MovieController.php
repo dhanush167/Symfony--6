@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Movie;
+use App\Form\MovieFormType;
 use App\Repository\MovieRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -17,6 +18,15 @@ class MovieController extends AbstractController
     public function __construct(EntityManagerInterface $em)
     {
         $this->em = $em;
+    }
+
+
+    #[Route('/movies/create', name: 'movie.create', methods: ['GET','HEAD'])]
+    public function create(): Response
+    {
+        $movie = new Movie();
+        $form = $this->createForm(MovieFormType::class,$movie);
+        return $this->render('movie/create.html.twig',['form'=>$form->createView()]);
     }
 
 
