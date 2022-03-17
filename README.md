@@ -122,3 +122,11 @@ npm run dev
 ```
 npm run watch
 ```
+
+<hr>
+
+<p>create form</p>
+
+```
+composer require symfony/form
+```
