@@ -1,0 +1,91 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+
+    Movies Page
+
+{% endblock %}
+
+
+{% block body %}
+
+
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h3>Details Siswa</h3>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="row">
+
+
+                <div class="col-md-12">
+                    <div class="form-group">
+
+                        <img src="#" alt="">
+
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-12">
+                    <div class="form-group">
+
+                        <strong>Title</strong> {{ movie.title }}
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-md-12">
+                    <div class="form-group">
+
+                        <strong>Release Year</strong> {{ movie.releaseYear }}
+
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-12">
+                    <div class="form-group">
+
+                        <strong>Description</strong> {{ movie.description }}
+
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-12">
+                    <div class="form-group">
+
+                        <img src="{{ movie.imagePath }}" alt="">
+
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-12">
+                    <a href="{{ path('movie.index') }}" class="btn btn-sm btn-success">Back</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}

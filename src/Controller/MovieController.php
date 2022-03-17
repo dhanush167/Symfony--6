@@ -20,7 +20,7 @@ class MovieController extends AbstractController
     }
 
 
-    #[Route('/movies', name: 'movies', methods: ['GET','HEAD'])]
+    #[Route('/movies', name: 'movie.index', methods: ['GET','HEAD'])]
     public function index(): Response
     {
         $repository = $this->em->getRepository(Movie::class);
@@ -29,4 +29,20 @@ class MovieController extends AbstractController
         return $this->render('movie/index.html.twig',['movies'=>$movies]);
 
     }
+
+    #[Route('/movies/{id}', name: 'movie.show', methods: ['GET','HEAD'])]
+    public function show($id): Response
+    {
+        $repository = $this->em->getRepository(Movie::class);
+        $movie = $repository->find($id);
+
+        //dd($movie);
+
+        return $this->render('movie/show.html.twig',['movie'=>$movie]);
+
+    }
+
+
+
+
 }
