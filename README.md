@@ -134,3 +134,7 @@ composer require symfony/form
 ```
 symfony console make:form MovieFormType Movie
 ```
+
+```
+composer require symfony/mime
+```
