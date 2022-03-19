@@ -17,9 +17,10 @@ class MovieController extends AbstractController
 
     private $em;
 
-    public function __construct(EntityManagerInterface $em)
+    public function __construct(EntityManagerInterface $em, MovieRepository $movieRepository)
     {
         $this->em = $em;
+        $this->movieRepository = $movieRepository;
     }
 
 
@@ -87,10 +88,30 @@ class MovieController extends AbstractController
     }
 
     #[Route('/movies/edit/{id}', name: 'edit.movie')]
-    public function edit($id): Response
+    public function edit($id, Request $request): Response
     {
-        dd($id);
-        exit;
+        $movie = $this->movieRepository->find($id);
+        $form = $this->createForm(MovieFormType::class,$movie);
+
+        $form->handleRequest($request);
+        $imagePath = $form->get('imagePath')->getData();
+
+        if ($form->isSubmitted() && $form->isValid())
+        {
+            if($imagePath)
+            {
+
+                // handle image upload
+
+            } else
+            {
+                 dd("ok");
+
+            }
+        }
+
+        return $this->render('movie/edit.html.twig',['movie'=>$movie,'form'=>$form->createView()]);
+
     }
 
 
