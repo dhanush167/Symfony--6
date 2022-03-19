@@ -86,7 +86,12 @@ class MovieController extends AbstractController
 
     }
 
-
+    #[Route('/movies/edit/{id}', name: 'edit.movie')]
+    public function edit($id): Response
+    {
+        dd($id);
+        exit;
+    }
 
 
 }
