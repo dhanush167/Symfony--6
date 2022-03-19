@@ -105,7 +105,12 @@ class MovieController extends AbstractController
 
             } else
             {
-                 dd("ok");
+              $movie->setTitle($form->get('title')->getData());
+              $movie->setReleaseYear($form->get('releaseYear')->getData());
+              $movie->setDescription($form->get('description')->getData());
+
+              $this->em->flush();
+              return $this->redirectToRoute('movie.index');
 
             }
         }
