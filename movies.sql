@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 17, 2022 at 02:08 PM
+-- Generation Time: Mar 20, 2022 at 04:59 PM
 -- Server version: 8.0.28-0ubuntu0.21.10.3
 -- PHP Version: 8.0.8
 
@@ -79,7 +79,7 @@ CREATE TABLE `movie` (
 --
 
 INSERT INTO `movie` (`id`, `title`, `release_year`, `description`, `image_path`) VALUES
-(6, 'The Dark Knight', 2008, 'This is the description of the dark knight', 'https://cdn.pixabay.com/photo/2020/07/06/17/51/batman-5377804_960_720.png'),
+(6, 'The Dark Knight', 2008, 'This is the description of the dark knight', '/uploads/62370cdaa42ff.png'),
 (7, 'Spider Man', 2022, 'This is the description of the Spider Man', 'https://cdn.pixabay.com/photo/2013/07/12/17/46/villain-152400_960_720.png'),
 (8, 'new files', 2222, 'Catchy lyrics, I thought this is an Indian song. Well done Pakistan. Beautiful song', '/uploads/6232e1ff0ba0a.jpg');
 
