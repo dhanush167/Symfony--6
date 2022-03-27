@@ -151,3 +151,14 @@ composer require symfony/validator doctrine/annotations
 ```
 use Symfony\Component\Validator\Constraints as Assert;
 ```
+
+## Security
+
+```
+composer require symfony/security-bundle
+```
+
+```
+php bin/console make:user
+```
+
