@@ -162,3 +162,7 @@ composer require symfony/security-bundle
 php bin/console make:user
 ```
 
+```
+symfony console make:migration
+symfony console doctrine:migrations:migrate
+```
