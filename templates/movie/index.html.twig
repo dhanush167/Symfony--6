@@ -27,7 +27,19 @@
                     <a class="btn btn-sm btn-success" href="{{ path('movie.create') }}">Create New</a>
                 </div>
 
+                <br>
 
+                <p>
+                    <a href="/{{ app.user ? 'logout': 'login' }}">
+                       {{ app.user ? 'logout' : 'login' }}
+                    </a>
+                </p>
+
+
+
+            <strong> login user: </strong>   {{app.user ? app.user.email : ''}}
+
+                <hr>
 
 
             <table class="table table-hover table-sm">
