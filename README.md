@@ -138,3 +138,16 @@ symfony console make:form MovieFormType Movie
 ```
 composer require symfony/mime
 ```
+
+
+<p>Validation</p>
+
+```
+composer require symfony/validator doctrine/annotations
+```
+
+<p>add to entity file</p>
+
+```
+use Symfony\Component\Validator\Constraints as Assert;
+```
