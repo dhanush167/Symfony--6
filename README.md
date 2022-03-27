@@ -166,3 +166,7 @@ php bin/console make:user
 symfony console make:migration
 symfony console doctrine:migrations:migrate
 ```
+
+```
+symfony console make:registration-form
+```
