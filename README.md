@@ -170,3 +170,10 @@ symfony console doctrine:migrations:migrate
 ```
 symfony console make:registration-form
 ```
+
+<p>add login form</p>
+
+```
+symfony console make:auth
+```
+
