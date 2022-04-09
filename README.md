@@ -176,4 +176,53 @@ symfony console make:registration-form
 ```
 symfony console make:auth
 ```
+<h4> Query Builder </h4>
+
+```php
+
+
+    public function selectOnlyTitle()
+    {
+        $qb = $this->createQueryBuilder('m');
+        return $qb->select('m.title')->getQuery()->getResult();
+    }
+
+    public function selectOnlyTitleId7()
+    {
+        $qb = $this->createQueryBuilder('m');
+        return $qb->select('m.title')->where('m.id=7')->getQuery()->getResult();
+    }
+
+
+    public function selectOnlyLimitData()
+    {
+        $qb = $this->createQueryBuilder('m');
+        return $qb->select('m.title')->setMaxResults('2')->setFirstResult(3)->getQuery()->getResult();
+    }
+
+    public function selectOnlyLimitDataRandom()
+    {
+        $randomId = rand(1, 5);
+
+        $qb = $this->createQueryBuilder('m');
+
+        return $qb->select('m.title')
+        ->setMaxResults(3)
+        ->setFirstResult($randomId)
+        ->getQuery()
+        ->getResult();
+
+    }
+
+```
+
+
+
+
+
+
+
+
+
+
 
