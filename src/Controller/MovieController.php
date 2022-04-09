@@ -8,6 +8,7 @@ use App\Repository\MovieRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -22,6 +23,23 @@ class MovieController extends AbstractController
         $this->em = $em;
         $this->movieRepository = $movieRepository;
     }
+
+
+
+
+    #[Route('/', name: 'front.movie',methods: ['GET'])]
+    public function front()
+    {
+    
+        // $posts = $this->movieRepository->selectOnlyTitle();
+        // $posts = $this->movieRepository->selectOnlyTitleId7();
+        //$posts = $this->movieRepository->selectOnlyLimitData();
+        $posts = $this->movieRepository->selectOnlyLimitDataRandom();
+
+        dd($posts);
+
+    }
+
 
 
     #[Route('/movies/delete/{id}', name: 'delete.movie',methods: ['GET', 'DELETE'])]
