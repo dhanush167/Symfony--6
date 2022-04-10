@@ -34,7 +34,10 @@ class MovieController extends AbstractController
         // $posts = $this->movieRepository->selectOnlyTitle();
         // $posts = $this->movieRepository->selectOnlyTitleId7();
         //$posts = $this->movieRepository->selectOnlyLimitData();
-        $posts = $this->movieRepository->selectOnlyLimitDataRandom();
+        //$posts = $this->movieRepository->selectOnlyLimitDataRandom();
+
+        $posts = $this->movieRepository->passParameterOrVariable();
+
 
         dd($posts);
 

@@ -80,6 +80,26 @@ class MovieRepository extends ServiceEntityRepository
     }
 
 
+      
+    public function passParameterOrVariable()
+    {
+
+        $randomId = rand(7, 9);
+
+        $qb = $this->createQueryBuilder('m');
+
+        return $qb->select('m.title')
+        ->where('m.id=:val')
+        ->setParameter('val', $randomId)
+        ->getQuery()
+        ->getResult();
+       
+
+    }
+
+
+
+
      //return $this->getEntityManager()
      //->createQuery('...')
      //->setMaxResults(5)
