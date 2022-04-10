@@ -184,20 +184,29 @@ symfony console make:auth
     public function selectOnlyTitle()
     {
         $qb = $this->createQueryBuilder('m');
-        return $qb->select('m.title')->getQuery()->getResult();
+        return $qb->select('m.title')
+        ->getQuery()
+        ->getResult();
     }
 
     public function selectOnlyTitleId7()
     {
         $qb = $this->createQueryBuilder('m');
-        return $qb->select('m.title')->where('m.id=7')->getQuery()->getResult();
+        return $qb->select('m.title')
+        ->where('m.id=7')
+        ->getQuery()
+        ->getResult();
     }
 
 
     public function selectOnlyLimitData()
     {
         $qb = $this->createQueryBuilder('m');
-        return $qb->select('m.title')->setMaxResults('2')->setFirstResult(3)->getQuery()->getResult();
+        return $qb->select('m.title')
+        ->setMaxResults('2')
+        ->setFirstResult(3)
+        ->getQuery()
+        ->getResult();
     }
 
     public function selectOnlyLimitDataRandom()
