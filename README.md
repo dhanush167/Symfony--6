@@ -1,4 +1,6 @@
+<h3> Creating Routes as Attributes or Annotations </h3>
 
+<p> Creating Routes (This configuration tells Symfony to look for routes) </p>
 ```
 composer require annotations
 ```
