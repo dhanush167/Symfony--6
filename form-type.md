@@ -119,4 +119,52 @@ class MovieFormType extends AbstractType
 
 ```
 
+<p> all controller structure </p>
+
+```php
+
+
+    #[Route('/movies/create', name: 'movie.create')]
+    public function create(Request $request): Response
+    {
+        $movie = new Movie();
+        $form = $this->createForm(MovieFormType::class,$movie);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid())
+        {
+           $newMovie = $form->getData();
+
+           $imagePath = $form->get('imagePath')->getData();
+
+           if ($imagePath)
+           {
+               $newFileName = uniqid().'.'. $imagePath->guessExtension();
+
+               try {
+                   $imagePath->move(
+                     $this->getParameter('kernel.project_dir').'/public/uploads',
+                     $newFileName
+                   );
+               } catch (FileException $e) {
+                    return new Response($e->getMessage());
+               }
+
+               $newMovie->setImagePath('/uploads/'.$newFileName);
+
+           }
+
+           $this->em->persist($newMovie);
+           $this->em->flush();
+
+           return $this->redirectToRoute('movie.index');
+
+        }
+
+        return $this->render('movie/create.html.twig',['form'=>$form->createView()]);
+    }
+
+```
+
+
 
