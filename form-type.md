@@ -95,3 +95,28 @@ class MovieFormType extends AbstractType
     }
 
 ```
+
+<p>index.html.twig</p>
+
+```php
+
+   {{ form_start(form) }}
+
+                <div class="row">
+
+                    <div class="col-md-12">
+                      {{ form_widget(form) }}
+                    </div>
+
+                    <div class="col-md-12">
+                        <a href="{{ path('movie.index') }}" class="btn btn-sm btn-success"> Back</a>
+                        <button type="submit" class="btn btn-sm btn-primary">Submit</button>
+                    </div>
+
+                </div>
+
+       {{ form_end(form) }}
+
+```
+
+
