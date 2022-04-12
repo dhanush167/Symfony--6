@@ -243,6 +243,9 @@ symfony console make:auth
        
 
     }
+    
+    /*set multiple setParameters*/
+    ->setParameters(array('param1'=> $param1, 'param2' => $param2))
 
 ```
 
